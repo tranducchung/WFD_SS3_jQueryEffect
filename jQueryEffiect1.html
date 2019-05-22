@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>jQuery Effect</title>
+</head>
+<body>
+<script>
+    $(document).ready(function () {
+        $("button").on(
+            {
+                click:function () {
+                    var div = $("div");
+                    div.animate({left:'250px'},"slow");
+                    div.animate({fontSize :'100px'},"slow");
+                },
+                
+                mouseleave: function () {
+                    $(this).css("background-color", "yellow");
+                },
+
+                mouseenter: function(){
+                    $(this).css("background-color", "lightgray");
+                },
+            }
+        )
+    });
+</script>
+<button>Start Animation</button>
+<div style="background:#98bf21;height:100px;width:200px;position:absolute;">HELLO</div>
+</body>
+</html>
